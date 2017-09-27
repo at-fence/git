@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+ <script src="sketch.js"></script>
+
+  <title>20161189</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="sketch.js">
+
+  </script>
+  <script>
+    // function home() {
+    //   document.getElementById("mainframe").style.width="95vw";
+    //   document.getElementById("mainframe").src="iframe.html";
+    // }
+    // function Ohnana() {
+    //   document.getElementById("mainframe").style.width="45vw";
+    //   document.getElementById("mainframe").src="https://www.youtube.com/embed/yPTcKSVAEvA";
+    // }
+    function home(){
+      document.getElementById("mainframe").style.width = "97vw";
+    }
+    function show(n) {
+      var lyric;
+      if (n == 2) {
+        lyric =
+          "<pre>Sunday morning rain is falling \nSteal some covers share some skin\nClouds are shrouding us in moments unforgettable \nYou twist to fit the mold that I am in \nBut things just get so crazy living life gets hard to do \nAnd I would gladly hit the road get up and go if I knew \nThat someday it ould lead me back to you \nThat someday it would lead me back to you </pre>";
+      } else if (n == 3) {
+        lyric = "<pre>I'm hurting, baby, I'm broken down\nI need your loving, \nloving I need it now \nWhen I'm without you \nI'm something weak \nYou got me begging, begging \nI'm on my knees</pre>";
+      } else if (n == 4) {
+        lyric = "<pre>Please don't see \nJust a boy caught up in dreams and fantasies \nPlease see me \nReaching out for someone I can't see</pre>";
+      } else if (n == 5) {
+        lyric = "<pre>Beauty queen of only eighteen \nShe had some trouble with herself \nHe was always there to help her \nShe always belonged to someone else</pre>";
+      } else {
+        lyric = "";
+      }
+      document.getElementById("mainframe").style.width="50vw";
+      document.getElementById("lylic").innerHTML = lyric;
+    }
+
+    var canvas = createCanvas(600, 500);
+    canvas.parent("sketch");
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <p class="title"><a href="iframe.html" target="youtubeframe" onclick="home()">K.A.R.D</a></p>
+    <ul>
+      <li><a href="https://www.youtube.com/embed/G8nJ-KAiBeo?autoplay=1" target="youtubeframe" onclick="show(2)">Oh nana</a></li>
+      <li><a href="dontrecall.html">Don't Recall</a></li>
+      <li><a href="rumor.html">RUMOR</a></li>
+      <li><a href="holahola.html">Hola Hola</a></li>
+    </ul>
+  </header>
+  <article>
+    <iframe id="mainframe" name="youtubeframe" src="iframe.html"></iframe>
+    <div id="lylic">
+    </div>
+    <div id="sketch">
+
+    </div>
+
+  </article>
+  <footer> 20161189 <br> Song, Jinkyoung</footer>
+</body>
+
+</html>
